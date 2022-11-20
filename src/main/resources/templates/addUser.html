@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add User</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="container">
+<form action="#" th:action="@{/company/saveUser}" th:object="${user}" method="POST">
+<br>
+<h4>Add User</h4>
+ <div class="form-group">
+<input type="text" th:field="*{firstName}" placeholder="User Name">
+</div>
+ <div class="form-group">
+<input type="text" th:field="*{lastName}" placeholder="Last Name">
+</div>
+ <div class="form-group">
+<input type="text" th:field="*{emailId}" placeholder="Email Id">
+</div>
+ <div class="form-group">
+<button type="submit" class="btn btn-primary" >Save</button>
+</div>
+</form>
+</div>
+</body>
+</html>
